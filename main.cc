@@ -5,18 +5,15 @@
 #include <sstream>
 #include "textdisplay.h"
 
+
 using namespace std;
 
 
+class TextDisplay;
+
+// print the board to the screen 
 int main(int argc, char *argv[]) {
-    string filename = argv[1];
-    ifstream file(filename);
-    string line;
-    vector<string> lines;
-    while (getline(file, line)) {
-        lines.push_back(line);
-    }
-    TextDisplay td(lines);
-    td.print();
+    TextDisplay td;
+    cout << td;
     return 0;
 }

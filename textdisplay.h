@@ -9,14 +9,16 @@
 class Subject;
 
 class TextDisplay {
-    std::vector<std::vector<char>> theDisplay;
+    std::vector<std::vector<char>> text;
 
     public:
     TextDisplay();
     ~TextDisplay();
-    void notify();
+    void reset();
+    void addPlayer(char playerNum, int row, int col);
 
-    friend std::ostream &operator<<(std::ostream &out, const TextDisplay &td);
+
+    friend std::ostream &operator<<(std::ostream &out, const TextDisplay &display);
 
 };
 
